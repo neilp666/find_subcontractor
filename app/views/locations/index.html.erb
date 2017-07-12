@@ -3,7 +3,12 @@
     <h3>SubContractor Finder</h3>
       <p class="lead">Use this postcode search to quickly find subcontractors in your area</p>
       <p><%= form_tag locations_path, :method => :get do %>
+        <%= label :search, "Postcode : " %>
         <%= text_field_tag :search, params[:search], placeholder: "e.g M20 2WZ" %>
+
+        <%= label :distance, "Distance : " %>
+        <%= text_field_tag :distance, params[:distance] %>
+
         <%= submit_tag "Subcontractors near", :name => nil %>
       </p>
     <% end %>
