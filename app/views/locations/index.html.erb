@@ -1,0 +1,19 @@
+<%= link_to 'Add place', new_location_path, class: 'btn btn-primary btn-lg' %>
+
+<table class="table">
+        <tr>
+          <td><strong>Company Name</strong></td>
+          <td><strong>Address</strong></td>
+          <td><strong>City</strong></td>
+          <td><strong>Postcode</strong></td>
+        </tr>
+      </thead>
+        <% @locations.each do |location| %>
+        <tr>
+          <td><%= location.company_name %></td>
+          <td><%= location.address %></td>
+          <td><%= location.city %></td>
+          <td><%= location.postcode %></td>
+        </tr>
+        <% end %>
+      </table>
