@@ -1,13 +1,21 @@
-<%= link_to 'Add place', new_location_path, class: 'btn btn-primary btn-lg' %>
+<div class="container">
+  <div class="starter-template">
+    <h3>SubContractor Finder</h3>
+      <p class="lead">Use this postcode search to quickly find subcontractors in your area</p>
+      <p><%= form_tag locations_path, :method => :get do %>
+        <%= text_field_tag :search, params[:search], placeholder: "e.g M20 2WZ" %>
+        <%= submit_tag "Subcontractors near", :name => nil %>
+      </p>
+    <% end %>
 
-<table class="table">
+     <table class="table">
         <tr>
           <td><strong>Company Name</strong></td>
           <td><strong>Address</strong></td>
           <td><strong>City</strong></td>
           <td><strong>Postcode</strong></td>
         </tr>
-      </thead>
+
         <% @locations.each do |location| %>
         <tr>
           <td><%= location.company_name %></td>
@@ -17,3 +25,5 @@
         </tr>
         <% end %>
       </table>
+ </div>
+</div>
