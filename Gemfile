@@ -23,6 +23,11 @@ ruby "2.3.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '3.1.0'
+end
+
+group :test do
+  gem 'capybara', '2.7.1'
 end
 
 group :development do
