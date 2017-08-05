@@ -6,10 +6,10 @@
         <%= label :search, "Postcode : " %>
         <%= text_field_tag :search, params[:search], placeholder: "e.g M20 2WZ" %>
 
-        <%= label :distance, "Distance : " %>
-        <%= text_field_tag :distance, params[:distance] %>
+        <%= label :distance, "Distance(km) : " %>
+        <%= text_field_tag :distance, params[:distance], placeholder: "e.g 35" %>
 
-        <%= submit_tag "Subcontractors near", :name => nil %>
+        <%= submit_tag "Subcontractors near", :name => nil, class: "btn-sm btn-success" %>
       </p>
     <% end %>
 
