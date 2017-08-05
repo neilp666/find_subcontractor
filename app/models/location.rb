@@ -5,4 +5,6 @@ class Location < ApplicationRecord
   def full_address
    [address, city, postcode].compact.join(',')
   end
+
+  validates :postcode, presence: { message: "postcode must be given please" }
 end

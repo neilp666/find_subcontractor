@@ -12,7 +12,14 @@
 
         <%= submit_tag "Subcontractors near", :name => nil, class: "btn-sm btn-success" %>
       </p>
+
     <% end %>
+
+    <% if @locations.blank? %>
+      <div class="alert alert-danger message-font text-center" role="alert">
+      <h3>No Subcontractors found within this area.</h3>
+    </div>
+      <% else %>
 
      <table class="table">
         <tr>
@@ -31,6 +38,7 @@
         </tr>
         <% end %>
       </table>
+    <% end %>
  </div>
 
   <footer class="footer">
