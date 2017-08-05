@@ -2,12 +2,31 @@
 
 body {
   background-color: #7FDBFF;
+  line-height: 1.5;
+  font-family: 'Work Sans', sans-serif;
 
 }
 
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+footer nav a {
+  width: 16px;
+  margin-left: 5px;
+  display: inline-block;
 }
 
 

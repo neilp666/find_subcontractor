@@ -1,7 +1,8 @@
 <div class="container">
   <div class="starter-template">
-    <h3>SubContractor Finder</h3>
+    <i class="fa fa-building fa-2x"></i> <h3>SubContractor Finder.</h3>
       <p class="lead">Use this postcode search to quickly find subcontractors in your area</p>
+      
       <p><%= form_tag locations_path, :method => :get do %>
         <%= label :search, "Postcode : " %>
         <%= text_field_tag :search, params[:search], placeholder: "e.g M20 2WZ" %>
@@ -31,4 +32,19 @@
         <% end %>
       </table>
  </div>
+
+ <footer>
+  <p>Copyright 2017</p>
+  <nav>
+    <a href="http://facebook.com">
+        <img src="designs/icon-instagram.svg">
+    </a>
+    <a href="http://facebook.com">
+        <img src="designs/icon-facebook.svg">
+    </a>
+     <a href="http://facebook.com">
+        <img src="designs/icon-twitter.svg">
+    </a>
+  </nav>
+</footer>
 </div>
