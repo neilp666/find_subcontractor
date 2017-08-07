@@ -24,4 +24,22 @@ RSpec.feature "Listing Subcontractors" do
   expect(page).to have_content(@subcontractor2.city)
   expect(page).to have_content(@subcontractor2.postcode)
  end
+
+ scenario 'A user does not see list of Subcontractors' do
+  Location.delete_all
+
+  visit "/"
+  expect(page).not_to have_content(@subcontractor1.company_name)
+  expect(page).not_to have_content(@subcontractor1.address)
+  expect(page).not_to have_content(@subcontractor1.city)
+  expect(page).not_to have_content(@subcontractor1.postcode)
+
+  expect(page).not_to have_content(@subcontractor2.company_name)
+  expect(page).not_to have_content(@subcontractor2.address)
+  expect(page).not_to have_content(@subcontractor2.city)
+  expect(page).not_to have_content(@subcontractor2.postcode)
+  expect(page).to have_content('No Subcontractors found within this area.')
+  
+ end
+
 end
