@@ -23,7 +23,7 @@ ruby "2.3.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '3.1.0'
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 end
 
 group :test do
