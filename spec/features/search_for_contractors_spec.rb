@@ -17,4 +17,14 @@ RSpec.feature "Search for contractors" do
 
   expect(page).to have_content(@subcontractor1.company_name)
  end
+
+ scenario "search returns no contractors within the area" do
+  visit '/'
+
+  fill_in "search", with: "M20 2WZ"
+  fill_in "distance", with: "2"
+  click_button "Subcontractors near"
+
+  expect(page).to have_content('No Subcontractors found within this area')
+ end
 end
